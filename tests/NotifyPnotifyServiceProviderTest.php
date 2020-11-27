@@ -37,12 +37,8 @@ class NotifyPnotifyServiceProviderTest extends TestCase
         $this->assertArrayHasKey('pnotify', $config->get('adapters'));
 
         $this->assertEquals(array(
-            'pnotify' => array(
-                'scripts' => array('jquery.js'),
-                'styles' => array('styles.css'),
-                'options' => array(),
-            ),
-            'pnotify' => array('scripts' => array('jquery.js')),
+            'toastr' => array('scripts' => array('jquery.js'), 'styles' => array('styles.css'), 'options' => array()),
+            'pnotify' => array('scripts' => array('jquery.js'), 'styles' => array('styles.css'), 'options' => array()),
         ), $config->get('adapters'));
     }
 }
